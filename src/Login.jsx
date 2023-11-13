@@ -16,6 +16,18 @@ const Login = () => {
         useRef.current.focus()
     }, [])
 
+    useEffect(() => {
+        setErrMsg('')
+    }, [username, password])
+
+    useEffect(() => {
+        useRef.current.focus()
+    }, [])
+
+    useEffect(() => {
+        useRef.current.focus()
+    }, [])
+
 
   return (
     <div>
