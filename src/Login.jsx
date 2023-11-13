@@ -39,7 +39,29 @@ const Login = () => {
         <h1> Sign In </h1>
 
         <form  >
-            
+            <label htmlFor="">
+                Username: 
+                <input 
+                    type="text" 
+                    id='username'
+                    ref={userRef}
+                    autoComplete='off'
+                    onChange={(e) => setUsername(e.target.value)}
+                    value={username}
+                    required
+                 />
+            </label>
+
+            <label htmlFor="">
+                Password: 
+                <input 
+                    type="password"
+                    id='password'
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                    required 
+                 />
+            </label>
         </form>
     </section>
     </>
