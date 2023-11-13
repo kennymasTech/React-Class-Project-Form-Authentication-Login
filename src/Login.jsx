@@ -13,7 +13,7 @@ const Login = () => {
 
 
     useEffect(() => {
-        useRef.current.focus()
+        userRef.current.focus()
     }, [])
 
     useEffect(() => {
@@ -39,7 +39,7 @@ const Login = () => {
         <h1> Sign In </h1>
 
         <form  >
-            <label htmlFor="">
+            <label >
                 Username: 
                 <input 
                     type="text" 
@@ -52,7 +52,7 @@ const Login = () => {
                  />
             </label>
 
-            <label htmlFor="">
+            <label >
                 Password: 
                 <input 
                     type="password"
