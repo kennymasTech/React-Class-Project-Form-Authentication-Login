@@ -62,7 +62,21 @@ const Login = () => {
                     required 
                  />
             </label>
+
+            <button>
+                Sign In
+            </button>
+
         </form>
+
+        <p>
+            Need An Account ? <br/>
+            <span className='line' >
+                <a href="#">
+                    Sign Up
+                </a>
+            </span>
+        </p>
     </section>
     </>
   )
