@@ -20,19 +20,23 @@ const Login = () => {
         setErrMsg('')
     }, [username, password])
 
-    useEffect(() => {
-        useRef.current.focus()
-    }, [])
+    // useEffect(() => {
+    //     useRef.current.focus()
+    // }, [])
 
-    useEffect(() => {
-        useRef.current.focus()
-    }, [])
+    // useEffect(() => {
+    //     useRef.current.focus()
+    // }, [])
 
 
   return (
-    <div>
-      
-    </div>
+    <>
+    <section>
+        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">
+            {errMsg}
+        </p>
+    </section>
+    </>
   )
 }
 
