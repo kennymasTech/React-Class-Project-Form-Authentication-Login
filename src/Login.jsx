@@ -20,17 +20,32 @@ const Login = () => {
         setErrMsg('')
     }, [username, password])
 
-    // useEffect(() => {
-    //     useRef.current.focus()
-    // }, [])
-
-    // useEffect(() => {
-    //     useRef.current.focus()
-    // }, [])
+    
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        if(!username || !password) {
+            setErrMsg('Invalid Entry');
+            return;
+    }
+        console.log(username, password);
+        setSuccess(true);
+         // To Clear State And Control Input
+        setUsername("");
+        setPassword("");
+    }
 
 
   return (
     <>
+    { success ? (
+        <section>
+            <h1>Successfully Signed Up</h1>
+            <p>
+            <a href="home"> Bact To Home</a>
+            </p>
+        </section>
+    ) : (
+
     <section>
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">
             {errMsg}
@@ -38,8 +53,8 @@ const Login = () => {
 
         <h1> Sign In </h1>
 
-        <form  >
-            <label >
+        <form onSubmit={handleSubmit} >
+            <label htmlFor="username" >
                 Username: 
                 <input 
                     type="text" 
@@ -52,7 +67,7 @@ const Login = () => {
                  />
             </label>
 
-            <label >
+            <label htmlFor="password" >
                 Password: 
                 <input 
                     type="password"
@@ -63,7 +78,7 @@ const Login = () => {
                  />
             </label>
 
-            <button>
+            <button disabled={ !username || !password ? true : false }>
                 Sign In
             </button>
 
@@ -78,6 +93,8 @@ const Login = () => {
             </span>
         </p>
     </section>
+    )}
+
     </>
   )
 }
