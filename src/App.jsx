@@ -9,7 +9,8 @@ const App = () => {
     <main className='App' >
         <Routes>
           <Route path='/' element={<Layout/>}/>
-          
+          { /* public routes */ }
+          <Route path='login' element={<Login/>}/>
         </Routes>
     </main>
   )
