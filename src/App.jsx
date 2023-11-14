@@ -29,7 +29,7 @@ const App = () => {
                 <Route path='unauthorized' element={<Unauthorized/>}/>
 
               {/* private route */}
-              <Route element={<RequireAuth allowedRoles={[ROLES.User]}/>}>
+              <Route element={<RequireAuth allowedRoles={[ROLES.User, ROLES.Editor]}/>}>
                 <Route path='/' element={<Home/>}/>
               </Route>
               <Route element={<RequireAuth allowedRoles={[ROLES.Editor]}/>}>
