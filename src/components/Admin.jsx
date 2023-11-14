@@ -6,7 +6,7 @@ const Admin = () => {
     <section>
         <h1>Admin Page.</h1>
         <br />
-        <p>You nmust have been assigned an Admin Role</p>
+        <p>You Must Have Been Assigned An Admin Role</p>
 
         <div className='flexGrow'>
             <Link to='/'>Home</Link>
