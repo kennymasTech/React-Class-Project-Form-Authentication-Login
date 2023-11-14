@@ -42,8 +42,17 @@ const Login = () => {
             setSuccess(true);
             setUser("");
             setPwd("");
-        } catch (err) {
-
+        } catch (error) {
+            if (!error.response) {
+                setErrMsg('No Server Response')
+            } else if (error.response?.status === 400) {
+                setErrMsg('Missing Username Or Password')
+            } else if (error.response?.status === 401) {
+                setErrMsg('Unauthorized')
+            } else {
+                setErrMsg('Login Failed')
+            }
+            errRef.current.focus();
         }
     //     if(!user || !pwd) {
     //         setErrMsg('Invalid Entry');
