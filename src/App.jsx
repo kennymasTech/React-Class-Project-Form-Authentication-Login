@@ -6,13 +6,13 @@ import Layout from './components/Layout'
 
 const App = () => {
   return (
-    <main className='App' >
         <Routes>
           <Route path='/' element={<Layout/>}/>
           { /* public routes */ }
           <Route path='login' element={<Login/>}/>
+
+          <Route/>
         </Routes>
-    </main>
   )
 }
 
