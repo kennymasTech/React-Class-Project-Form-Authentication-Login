@@ -15,8 +15,9 @@ html {
 body {
     min-height: 100vh;
     background-color: dodgerblue;
-    /* background-image: url(/public/environmental-protection-326923_1280.jpg); */
-    background-image: url(/public/flowers-174817_1280.jpg);
+    background-image: url(/public/environmental-protection-326923_1280.jpg);
+    /* background-image: url(/public/flowers-174817_1280.jpg); */
+    /* background-image: url(/public/grass-1659054_1280.jpg); */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
