@@ -8,7 +8,11 @@ const Home = () => {
         <br/>
         <p>You're Logged In</p>
         <br/>
-        <Link to='/editor'> Go To The Editor Page</Link>
+        <Link to='/editor'> Go To The Editor Page </Link>
+        <br/>
+        <Link to='/admin'> Go To The Admin Page </Link>
+        <br/>
+        
     </section>
   )
 }
