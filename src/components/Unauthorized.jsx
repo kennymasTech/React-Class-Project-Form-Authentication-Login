@@ -5,7 +5,7 @@ const Unauthorized = () => {
     <section>
         <h1>Unauthorized ⚠️</h1>
         <br/>
-        
+        <p>You Do Not Have Access To The Requested Page.</p>
     </section>
   )
 }
