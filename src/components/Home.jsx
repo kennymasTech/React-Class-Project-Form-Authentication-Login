@@ -12,6 +12,10 @@ const Home = () => {
         <br/>
         <Link to='/admin'> Go To The Admin Page </Link>
         <br/>
+        <Link to='/lounge'> Go To The Lounge </Link>
+        <br/>
+        <Link to='/linkpage'> Go To The Link Page </Link>
+
         
     </section>
   )
