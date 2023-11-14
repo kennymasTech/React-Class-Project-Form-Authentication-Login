@@ -6,14 +6,16 @@ import Layout from './components/Layout'
 
 const App = () => {
   return (
+    <main className='App'>
         <Routes>
-          <Route path='/' element={<Layout/>}/>
           { /* public routes */ }
-          <Route path='login' element={<Login/>}/>
-          <Route path='linkpage' element={<LinkPage/>}/>
-          <Route path='unauthorized' element={<Unauthorized/>}/>
-          <Route/>
+          <Route path='/' element={<Login/>}/>
+          <Route path='/linkpage' element={<LinkPage/>}/>
+          <Route path='/unauthorized' element={<Unauthorized/>}/>
+
         </Routes>
+
+    </main>
   )
 }
 
