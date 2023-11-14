@@ -10,13 +10,14 @@ const Login = () => {
     const { setAuth } = useAuth()
 
     const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
     const userRef = useRef()
     const errRef = useRef()
 
     const [ user, setUser ] = useState("")
     const [ pwd, setPwd ] = useState("")
     const [ errMsg, setErrMsg ] = useState("")
-    const [ success, setSuccess ] = useState(false)
 
 
     useEffect(() => {
@@ -41,9 +42,9 @@ const Login = () => {
 
             setAuth({user, pwd, roles, accessToken})
 
-            setSuccess(true);
             setUser("");
             setPwd("");
+            navigate(from{replace: true})
         } catch (error) {
             if (!error.response) {
                 setErrMsg('No Server Response')
