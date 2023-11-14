@@ -28,10 +28,15 @@ const Login = () => {
     
     const handleSubmit = async (e) => {
         e.preventDefault()
-        if(!username || !password) {
-            setErrMsg('Invalid Entry');
-            return;
-    }
+        try {
+
+        } catch (err) {
+
+        }
+    //     if(!username || !password) {
+    //         setErrMsg('Invalid Entry');
+    //         return;
+    // }
         console.log(username, password);
         setSuccess(true);
          // To Clear State And Control Input
