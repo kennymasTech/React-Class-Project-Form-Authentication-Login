@@ -44,7 +44,7 @@ const Login = () => {
 
             setUser("");
             setPwd("");
-            navigate(from{replace: true})
+            navigate(from, {replace: true})
         } catch (error) {
             if (!error.response) {
                 setErrMsg('No Server Response')
