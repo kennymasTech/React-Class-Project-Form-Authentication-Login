@@ -108,10 +108,8 @@ const Login = () => {
 
         <p>
             Need An Account ? <br/>
-            <span className='line' >
-                <a href="#">
-                    Sign Up
-                </a>
+            <span>
+                <Link to="/register">Sign Up</Link>
             </span>
         </p>
     </section>
