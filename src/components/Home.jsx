@@ -16,7 +16,9 @@ const Home = () => {
         <br/>
         <Link to='/linkpage'> Go To The Link Page </Link>
 
-        
+        <div className='flexGrow'>
+                <button>Sign Out</button>
+        </div>
     </section>
   )
 }
