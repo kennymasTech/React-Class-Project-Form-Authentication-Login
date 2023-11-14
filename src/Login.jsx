@@ -5,6 +5,7 @@ import axios from './api/axios'
 
 
 const Login = () => {
+    const LOGIN_URL = "/auth"
     const { setAuth } = useContext(AuthContext)
 
     const userRef = useRef()
