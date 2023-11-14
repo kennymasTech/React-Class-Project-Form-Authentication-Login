@@ -15,7 +15,12 @@ html {
 body {
     min-height: 100vh;
     background-color: dodgerblue;
-    /* background-color: rgb(146, 207, 130); */
+    /* background-image: url(/public/environmental-protection-326923_1280.jpg); */
+    background-image: url(/public/flowers-174817_1280.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .App {
