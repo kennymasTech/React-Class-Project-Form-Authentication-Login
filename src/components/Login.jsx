@@ -1,13 +1,15 @@
 
-import { useState, useEffect, useRef, useContext } from 'react'
-import AuthContext from '../context/AuthProvider'
+import { useState, useEffect, useRef } from 'react'
 import axios from '../api/axios'
+import useAuth from '../hooks/useAuth'
+import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
     const LOGIN_URL = "/auth"
-    const { setAuth } = useContext(AuthContext)
+    const { setAuth } = useAuth()
 
+    const navigate = useNavigate()
     const userRef = useRef()
     const errRef = useRef()
 
@@ -63,15 +65,7 @@ const Login = () => {
 
 
   return (
-    <>
-    { success ? (
-        <section>
-            <h1> Sign In Successfully </h1>
-            <p>
-            <a href="/"> Bact To Home</a>
-            </p>
-        </section>
-    ) : (
+    
 
     <section>
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">
@@ -120,10 +114,8 @@ const Login = () => {
             </span>
         </p>
     </section>
-    )}
-
-    </>
   )
+  
 }
 
 export default Login
