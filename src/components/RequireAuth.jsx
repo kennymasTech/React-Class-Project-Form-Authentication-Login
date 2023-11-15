@@ -3,7 +3,7 @@ import useAuth from "../hooks/useAuth"
 
 
 
-const RequireAuth = ({allowedRoles}) => {
+const RequireAuth = ({ allowedRoles }) => {
     const { auth } = useAuth()
     const location = useLocation()
   return (
