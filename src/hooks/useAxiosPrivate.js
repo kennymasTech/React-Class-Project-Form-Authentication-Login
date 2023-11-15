@@ -16,7 +16,9 @@ const useAxiosPrivate = () => {
                 if (!config.headers["Authorization"]) {
                     config.headers["Authorization"] = ` ${auth?.accessToken}` 
                 }
-            }
+
+                return config
+            }, (error) => Promise.reject(error)
         )
 
     }, [auth, refresh])
