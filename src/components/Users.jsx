@@ -6,7 +6,7 @@ const Users = () => {
     const [ users, setUsers ] = useState()
 
     useEffect(() => {
-        let inMounted = true
+        let isMounted = true
         const controller = new AbortController()
 
         const getUsers = async () => {
@@ -16,8 +16,10 @@ const Users = () => {
                     signal: controller.signal
                 })
                 console.log(response.data);
-            } catch (err) {
+                isMounted && setUsers(response.data)
 
+            } catch (err) {
+                    console.error(err);
             }
         }
     }, [])
