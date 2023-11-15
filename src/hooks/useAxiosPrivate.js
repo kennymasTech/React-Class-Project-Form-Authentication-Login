@@ -7,7 +7,7 @@ import useAuth from "./useAuth"
 
 const useAxiosPrivate = () => {
     const refresh = useRefreshToken()
-    const
+    const { auth } = useAuth()
   return (
     <div>useAxiosPrivate</div>
   )
