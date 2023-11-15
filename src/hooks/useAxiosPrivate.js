@@ -11,6 +11,14 @@ const useAxiosPrivate = () => {
 
     useEffect(() => {
 
+        const requestIntercept = axiosPrivate.interceptors.request.use((
+            config) => {
+                if (!config.headers["Authorization"]) {
+                    config.headers["Authorization"] = ` ${auth?.accessToken}` 
+                }
+            }
+        )
+
     }, [auth, refresh])
   return axiosPrivate
 }
