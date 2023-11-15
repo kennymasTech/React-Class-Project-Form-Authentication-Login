@@ -12,7 +12,7 @@ const Users = () => {
                     <ul>
                         {users.map((user, i) => <li key={i}>{user?.username}</li>)}
                     </ul>
-              ) : <p>No user to Display</p>
+              ) : <p>No User To Display</p>
             }
     </article>
   )
