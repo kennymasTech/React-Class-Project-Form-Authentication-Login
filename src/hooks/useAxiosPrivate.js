@@ -1,4 +1,4 @@
-import React from 'react'
+import { axiosPrivate } from "../api/axios"
 
 const useAxiosPrivate = () => {
   return (
