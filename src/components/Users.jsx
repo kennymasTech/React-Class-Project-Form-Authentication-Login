@@ -8,7 +8,15 @@ const Users = () => {
     useEffect(() => {
         let inMounted = true
         const controller = new AbortController()
-        
+
+        const getUsers = async () => {
+
+            try {
+                const response = await axios.get('/')
+            } catch (err) {
+
+            }
+        }
     }, [])
 
   return (
