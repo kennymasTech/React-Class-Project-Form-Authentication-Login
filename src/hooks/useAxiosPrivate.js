@@ -19,7 +19,7 @@ const useAxiosPrivate = () => {
 
                 return config
             }, (error) => Promise.reject(error)
-        )
+        );
 
     }, [auth, refresh])
   return axiosPrivate
