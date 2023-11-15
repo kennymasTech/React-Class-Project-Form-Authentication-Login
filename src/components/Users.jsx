@@ -6,6 +6,7 @@ import useRefreshToken from "../hooks/useRefreshToken"
 
 const Users = () => {
     const [ users, setUsers ] = useState()
+    const 
 
     useEffect(() => {
         let isMounted = true
@@ -42,6 +43,8 @@ const Users = () => {
                     </ul>
               ) : <p>No User To Display</p>
             }
+            <button onClick={() => refresh()}>Refresh</button>
+            <br />
     </article>
   )
 }
