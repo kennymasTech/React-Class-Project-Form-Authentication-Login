@@ -6,7 +6,7 @@ import useRefreshToken from "../hooks/useRefreshToken"
 
 const Users = () => {
     const [ users, setUsers ] = useState()
-    const refresh = useRefreshToken
+    const refresh = useRefreshToken()
 
     useEffect(() => {
         let isMounted = true

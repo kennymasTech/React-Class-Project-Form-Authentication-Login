@@ -3,7 +3,7 @@ import useAuth from "./useAuth"
 
 
 const useRefreshToken = () => {
-    const {setAuth} = useAuth()
+    const { setAuth } = useAuth()
 
     const refresh = async () => {
 
@@ -16,7 +16,7 @@ const useRefreshToken = () => {
 
             return {...prev, accessToken: response.data.accessToken}
         })
-        return
+        return response.data.accessToken
     }
   return refresh
 }
