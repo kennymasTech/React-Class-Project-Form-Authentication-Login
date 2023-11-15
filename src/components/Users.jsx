@@ -4,6 +4,11 @@ import { useState, useEffect } from "react"
 
 const Users = () => {
     const [ users, setUsers ] = useState()
+
+    useEffect(() => {
+
+    }, [])
+    
   return (
     <article>
         <h2>Users List</h2>
