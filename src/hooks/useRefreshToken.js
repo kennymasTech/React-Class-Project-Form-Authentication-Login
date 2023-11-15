@@ -18,9 +18,7 @@ const useRefreshToken = () => {
         })
         return
     }
-  return (
-    <div>useRefreshToken</div>
-  )
+  return refresh
 }
 
 export default useRefreshToken
