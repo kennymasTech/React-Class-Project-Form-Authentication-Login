@@ -1,14 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 const Lounge = () => {
   return (
     <section>
-        <h1> The Lounge</h1>
+        <h1>The Lounge</h1>
         <br />
-        <p>Admin And The Editor Can Hang Out Here</p>
+        <p>Admin and the editor can hangout here</p>
 
-        <div className='flexGrow'>
+        <div className="flexGrow">
             <Link to='/'>Home</Link>
         </div>
     </section>
