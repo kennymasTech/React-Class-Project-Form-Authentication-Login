@@ -15,6 +15,6 @@ const useLogout = () => {
         }
     }
   return  logOut
-}
+};
 
 export default useLogout
