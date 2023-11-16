@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react"
 import useAxiosPrivate from "../hooks/useAxiosPrivate"
+import { useNavigate, useLocation, Navigate } from "react-router-dom"
 
 
 
@@ -8,6 +9,8 @@ const Users = () => {
     const [ users, setUsers ] = useState()
     const axiosPrivate = useAxiosPrivate()
 
+    const navigate = useNavigate()
+    const location = useLocation()
 
     useEffect(() => {
         let isMounted = true
@@ -24,6 +27,7 @@ const Users = () => {
 
             } catch (err) {
                     console.error(err);
+                    Navigate('/login', {state: {from : location}, replace: true})
             }
         }
         getUsers()
