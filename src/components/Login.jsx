@@ -2,11 +2,11 @@ import { useEffect, useRef, useState} from "react";
 import axios from "../api/axios";
 import useAuth from "../hooks/useAuth";
 import { useNavigate, Link, useLocation } from "react-router-dom";
+const LOGIN_URL = '/auth'
 
 
 function Login() {
-   const LOGIN_URL = '/auth'
-   const {setAuth} = useAuth()
+   const {setAuth, persist, setPersist} = useAuth()
 
    const navigate = useNavigate()
    const location = useLocation()
