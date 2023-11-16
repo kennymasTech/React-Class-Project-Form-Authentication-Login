@@ -14,9 +14,7 @@ html {
 
 body {
     min-height: 100vh;
-    /* background-color: dodgerblue; */
-    background-image: url(/public/environmental-protection.jpg);
-    background-size: cover;
+    background-color: dodgerblue;
 }
 
 .App {
@@ -121,7 +119,7 @@ button {
     display: inline-block;
 }
 
-.persistCheck{
+.persistCheck {
     font-size: 0.75rem;
     margin-top: 10px;
     display: flex;
@@ -129,12 +127,13 @@ button {
     align-items: flex-end;
 }
 
-.persistCheck label{
-    margin: 0;
+.persistCheck > label {
+    margin: 0
 }
 
-[type = "chechbox"]{
+[type = "checkbox"]{
     height: 20px;
     width: 20px;
-    margin: 0px 5px 2px 2px;
+    margin: 0 5px 2px 2px;
+    
 }

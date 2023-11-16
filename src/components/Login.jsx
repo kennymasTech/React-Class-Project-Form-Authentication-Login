@@ -2,10 +2,10 @@ import { useEffect, useRef, useState} from "react";
 import axios from "../api/axios";
 import useAuth from "../hooks/useAuth";
 import { useNavigate, Link, useLocation } from "react-router-dom";
-const LOGIN_URL = '/auth'
 
 
 function Login() {
+   const LOGIN_URL = '/auth'
    const {setAuth, persist, setPersist} = useAuth()
 
    const navigate = useNavigate()
@@ -69,6 +69,7 @@ function Login() {
    useEffect(() => {
       localStorage.setItem('persist', persist)
    }, [persist])
+   
 
    return (
       
@@ -103,8 +104,13 @@ function Login() {
                   />
                   <button>Sign In</button>
                   <div className="persistCheck">
-                     <input type="checkbox" id="persist" onChange={togglePersist} checked={persist} />
-                     <label htmlFor="persist">Trust This Advice</label>
+                     <input
+                        type="checkbox"
+                        id="persist"
+                        checked={persist}
+                        onChange={togglePersist}
+                     />
+                     <label htmlFor="persist">Trust this device</label>
                   </div>
                </form>
                <p>
