@@ -3,11 +3,12 @@ import { useState, useEffect } from "react";
 import useRefreshToken from "../hooks/useRefreshToken";
 import useAuth from "../hooks/useAuth";
 
+
 const PersistLogin = () => {
         const [ isLoading, setIsLoading ] = useState()
         const refresh = useRefreshToken()
 
-        const { auth } = useAuth()
+        const { auth, persist } = useAuth()
 
         useEffect (() => {
             // let isMounted = true;
@@ -32,10 +33,12 @@ const PersistLogin = () => {
 
         return (
             <>
-                {isLoading ? 
-                        <p>Loading...</p>
-                        :
-                        <Outlet/>
+                {persist 
+                        ? <Outlet/> 
+                        :isLoading ? 
+                            <p>Loading...</p>
+                            :
+                            <Outlet/>
                 }
             </>
         )
