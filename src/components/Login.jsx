@@ -67,8 +67,8 @@ function Login() {
    }
 
    useEffect(() => {
-      localStorage.setItem('')
-   })
+      localStorage.setItem('persist', persist)
+   }, [persist])
 
    return (
       
