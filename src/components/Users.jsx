@@ -27,7 +27,7 @@ const Users = () => {
 
             } catch (err) {
                     console.error(err);
-                    Navigate('/login', {state: {from : location}, replace: true})
+                    // Navigate('/login', {state: {from : location}, replace: true})
             }
         }
         getUsers()
