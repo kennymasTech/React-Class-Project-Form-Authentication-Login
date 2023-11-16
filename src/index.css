@@ -121,7 +121,7 @@ button {
     display: inline-block;
 }
 
-.persistCheck {
+.persistCheck{
     font-size: 0.75rem;
     margin-top: 10px;
     display: flex;
@@ -129,12 +129,12 @@ button {
     align-items: flex-end;
 }
 
-.persistCheck label {
+.persistCheck label{
     margin: 0;
 }
 
-[type = "chechbox"] {
+[type = "chechbox"]{
     height: 20px;
     width: 20px;
-    margin: 0px, 5px, 2px, 2px;
+    margin: 0px 5px 2px 2px;
 }
