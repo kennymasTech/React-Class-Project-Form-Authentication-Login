@@ -17,4 +17,4 @@ const useLogout = () => {
   return  logOut
 };
 
-export default useLogout
+export default useLogout;
