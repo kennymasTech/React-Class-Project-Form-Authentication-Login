@@ -16,7 +16,7 @@ const ROLES = {
   'User' : 4000,
   'Editor' : 1984,
   'Admin' : 5150
-}
+};
 
 const App = () => {
   return (
