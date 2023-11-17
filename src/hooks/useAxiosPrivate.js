@@ -36,6 +36,6 @@ const useAxiosPrivate = () => {
         }
     }, [auth, refresh])
   return axiosPrivate
-}
+};
 
 export default useAxiosPrivate
