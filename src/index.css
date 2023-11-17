@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
     /* background-color: dodgerblue; */
     background-image: url(/public/environmental-protection.jpg);
+    background-size: cover;
 }
 
 .App {
