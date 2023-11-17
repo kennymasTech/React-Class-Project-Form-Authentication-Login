@@ -9,7 +9,7 @@ function Login() {
    const LOGIN_URL = '/auth'
    const {setAuth, persist, setPersist} = useAuth();
 
-   const navigate = useNavigate()
+   const navigate = useNavigate();
    const location = useLocation()
    const from = location.state?.from?.pathname || '/'
 
