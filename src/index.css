@@ -18,7 +18,7 @@ body {
     background-image: url(/public/environmental-protection.jpg);
     /* background-image: url(/public/flowers.jpg); */
     /* background-image: url(/public/bulb.jpg); */
-    background-image: url();
+    background-image: url(/);
     background-size: cover;
 }
 
