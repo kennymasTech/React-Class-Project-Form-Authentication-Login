@@ -16,7 +16,8 @@ body {
     min-height: 100vh;
     /* background-color: dodgerblue; */
     /* background-image: url(/public/environmental-protection.jpg); */
-    background-image: url(/public/flowers.jpg);
+    /* background-image: url(/public/flowers.jpg); */
+    background-image: url();
     background-size: cover;
 }
 
