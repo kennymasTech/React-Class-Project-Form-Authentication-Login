@@ -4,6 +4,8 @@ import axios from "../api/axios";
 import useAuth from "../hooks/useAuth";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import useInput from "../hooks/useInput";
+import useToggle from "../hooks/useToggle";
+
 const LOGIN_URL = '/auth'
 
 
@@ -17,9 +19,10 @@ function Login() {
    const userRef = useRef();
    const errRef = useRef();
 
-   const [user, resetUser, userAttribs] = useInput('')  //useState("");
+   const [user, resetUser, userAttribs] = useInput('user', '')  //useState("");
    const [pwd, setPwd] = useState("");
    const [errMsg, setErrMsg] = useState("");
+   const [check, toggleCheck] = useToggle('persist', false)
 
    useEffect(() => {
       userRef.current.focus();
