@@ -10,7 +10,7 @@ const LOGIN_URL = '/auth'
 
 
 function Login() {
-   const {setAuth, persist, setPersist} = useAuth();
+   const {setAuth} = useAuth();
 
    const navigate = useNavigate();
    const location = useLocation();
@@ -67,13 +67,13 @@ function Login() {
     
    };
 
-   const togglePersist = () => {
-      setPersist(prev => !prev)
-   }
+   // const togglePersist = () => {
+   //    setPersist(prev => !prev)
+   // }
 
-   useEffect(() => {
-      localStorage.setItem('persist', persist)
-   }, [persist])
+   // useEffect(() => {
+   //    localStorage.setItem('persist', persist)
+   // }, [persist])
    
 
    return (
