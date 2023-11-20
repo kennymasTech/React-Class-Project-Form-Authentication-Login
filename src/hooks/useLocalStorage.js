@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 
 const getLocalValue = ( key, initValue ) => {
     // SSR Next Js
-    if (typeof Window === 'undefined') return initValue
+    if (typeof window === 'undefined') return initValue
 
     // if a value is already stored
 
@@ -13,14 +13,15 @@ const getLocalValue = ( key, initValue ) => {
 
     // return result of a function 
 
-    if ( initValue instanceof Function ) return initValue
+    if ( initValue instanceof Function ) return initValue()
 
     return initValue
 }
 
 const useLocalStorage = (key, initValue) => {
-    const [ value, setValue ] = useState(JSON.parse(localStorage.getItem(key)) || 
-    initValue)
+    const [ value, setValue ] = useState(() => {
+        return getLocalValue(key, initValue)
+    })
 
     useEffect (() => {
         localStorage.setItem(key, JSON.stringify(value))
