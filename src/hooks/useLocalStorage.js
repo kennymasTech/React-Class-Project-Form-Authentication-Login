@@ -5,7 +5,15 @@ const getLocalValue = ( key, initValue ) => {
     // SSR Next Js
     if (typeof Window === 'undefined') return initValue
 
-    // 
+    // if a value is already stored
+
+    const localValue = JSON.parse(localStorage.getItem(key))
+
+    if (localValue) return localValue
+
+    // return result of a function 
+
+    if ( initValue instanceof function ) return initValue
 }
 
 const useLocalStorage = (key, initValue) => {
