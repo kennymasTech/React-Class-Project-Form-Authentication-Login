@@ -111,8 +111,8 @@ function Login() {
                      <input
                         type="checkbox"
                         id="persist"
-                        checked={persist}
-                        onChange={togglePersist}
+                        checked={check}
+                        onChange={toggleCheck}
                      />
                      <label htmlFor="persist">Trust this device</label>
                   </div>
