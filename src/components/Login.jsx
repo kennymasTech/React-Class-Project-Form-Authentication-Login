@@ -3,7 +3,6 @@ import { useEffect, useRef, useState} from "react";
 import axios from "../api/axios";
 import useAuth from "../hooks/useAuth";
 import { useNavigate, Link, useLocation } from "react-router-dom";
-import useLocalStorage from "../hooks/useLocalStorage";
 import useInput from "../hooks/useInput";
 const LOGIN_URL = '/auth'
 
@@ -18,7 +17,7 @@ function Login() {
    const userRef = useRef();
    const errRef = useRef();
 
-   const [user, resetUser, useAttribs] = useInput('')  //useState("");
+   const [user, resetUser, userAttribs] = useInput('')  //useState("");
    const [pwd, setPwd] = useState("");
    const [errMsg, setErrMsg] = useState("");
 
@@ -43,7 +42,7 @@ function Login() {
 
       setAuth({user, pwd, roles, accessToken})
 
-      setUser("");
+      resetUser("");
       setPwd("");
       navigate(from, {replace: true})
       } catch (error) {
@@ -92,8 +91,7 @@ function Login() {
                      id="username"
                      ref={userRef}
                      autoComplete="off"
-                     value={user}
-                     onChange={(e) => setUser(e.target.value)}
+                     {...userAttribs}
                      required
                   />
 
