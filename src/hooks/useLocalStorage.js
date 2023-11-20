@@ -2,8 +2,10 @@ import { useState, useEffect } from "react"
 
 
 const getLocalValue = ( key, initValue ) => {
-    //SSR Next Js
-    
+    // SSR Next Js
+    if (typeof Window === 'undefined') return initValue
+
+    // 
 }
 
 const useLocalStorage = (key, initValue) => {
