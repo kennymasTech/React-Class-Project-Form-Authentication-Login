@@ -8,6 +8,7 @@ const useLocalStorage = () => {
         localStorage.setItem(key, JSON.stringify(value))
     }, [key, value])
  
+    return [va]
 }
 
 export default useLocalStorage
